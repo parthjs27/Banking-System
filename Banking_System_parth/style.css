@@ -1,0 +1,246 @@
+/* General Reset and Body Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #1a1a1a;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Login & Sign Up Box Styles */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-box {
+    background-color: #333;
+    border-radius: 15px;
+    padding: 40px;
+    text-align: center;
+    width: 400px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.7);
+}
+
+/* Header Logo and Animation */
+.welcome-text {
+    font-size: 12px;
+    font-weight: lighter;
+}
+
+h1.logo {
+    font-size: 32px;
+    font-style: italic;
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(30deg);
+    }
+}
+
+h1 img {
+    margin-left: 10px;
+    width: 30px;
+    height: 30px;
+    animation: rotate 2s linear infinite;
+}
+
+/* Form Styles */
+form {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+/* Input Fields */
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: #222;
+    color: #fff;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.remember-forgot a {
+    color: #888;
+    text-decoration: none;
+}
+
+.checkbox-text{
+    margin-top: 7px;
+}
+
+.forgot-password-text{
+    font-size: 13px;
+    /* margin-bottom: 14px; */
+}
+
+/* Labels for Input Fields */
+.username-label-text,
+.password-label-text,
+.email-label-text {
+    font-weight: bold;
+}
+
+/* Password Visibility Toggle Button */
+.password-container {
+    position: relative;
+}
+
+.show-password-btn {
+    position: absolute;
+    right: 10px;
+    top: 35%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    perspective: 1000px;
+    overflow: hidden;
+    width: 30px;
+    height: 30px;
+}
+
+.show-password-btn img {
+    width: 20px;
+    height: 20px;
+    filter: brightness(0) invert(1);
+    transition: transform 0.2s ease;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Button Styles */
+.login-btn,
+.signup-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #ff7a00;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.signup-btn{
+    margin-top: 15px;
+}
+
+.login-btn:hover,
+.signup-btn:hover {
+    background-color: #e66a00;
+}
+
+/* Social Login */
+.social-login {
+    margin: 20px 0;
+}
+
+.social-login p {
+    margin-bottom: 10px;
+}
+
+.social-icons a {
+    margin: 0 10px;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+    filter: brightness(0) invert(1);
+}
+
+/* Link Styling */
+p a {
+    color: #ff7a00;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+p a:hover {
+    color: #e66a00;
+}
+
+p {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #888; /* Optional: Use lighter color to differentiate */
+}
+
+/* Basic style for the custom alert box */
+.alert-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f44336; /* Red background for error */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    color: white;
+    width: 300px;
+    text-align: center;
+}
+
+/* Style for the alert content */
+.alert-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Style for the close button */
+.alert-box button {
+    background-color: white;
+    color: #f44336;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Button hover effect */
+.alert-box button:hover {
+    background-color: #ffb3b3;
+}

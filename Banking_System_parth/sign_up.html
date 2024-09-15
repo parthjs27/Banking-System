@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <title>PrimeVault Login</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-box">
+            <h2 class="welcome-text">Welcome to</h2>
+            <h1 class="logo">PrimeVault <img src="assets/images/logo.png" alt="logo"></h1>
+            <form>
+                <label for="username" class="username-label-text">Username</label>
+                <input type="text" id="username" name="username" placeholder="Username">
+
+                <!-- New email field -->
+                <label for="email" class="email-label-text">Email</label>
+                <input type="email" id="email" name="email" placeholder="Email">
+                
+                <label for="password" class="password-label-text">Password</label>
+                <div class="password-container">
+                    <input type="password" id="password" name="password" placeholder="Password">
+                    <button type="button" class="show-password-btn" onclick="togglePassword()">
+                        <img src="assets/images/peek.png" alt="Show Password" id="peekImage">
+                    </button>
+                </div>
+                
+                <!-- Removed Remember Me and Forgot Password -->
+
+                <button type="submit" class="signup-btn">SIGN UP</button>
+                
+                <p>Already have an account? <a href="login.html">Login</a></p>
+                
+                <div class="social-login">
+                    <p>Or</p>
+                    <div class="social-icons">
+                        <a href="#"><img src="assets/images/google.png" alt="Google"></a>
+                        <a href="#"><img src="assets/images/facebook.png" alt="Facebook"></a>
+                        <a href="#"><img src="assets/images/apple.png" alt="Apple"></a>
+                        <a href="#"><img src="assets/images/github.png" alt="GitHub"></a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Custom Alert Box -->
+    <div id="customAlert" class="alert-box" style="display: none;">
+        <div class="alert-content">
+            <span id="alertMessage"></span>
+            <button id="closeAlert" onclick="closeAlert()">OK</button>
+        </div>
+    </div>
+
+</body>
+</html>
